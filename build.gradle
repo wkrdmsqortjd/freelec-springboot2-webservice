@@ -10,7 +10,6 @@ buildscript{
     }
 }
 
-
 apply plugin: 'java'
 apply plugin: 'eclipse'
 /*apply plugin: 'war'*/
@@ -36,7 +35,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 
     implementation('org.springframework.boot:spring-boot-starter-web')
-    implementation('org.springframework.boot:spring-boot-starter-mustache')
+//    implementation('org.springframework.boot:spring-boot-starter-mustache')
     testImplementation( 'org.springframework.boot:spring-boot-starter-test' )
 
     // lombok
@@ -46,20 +45,20 @@ dependencies {
     testAnnotationProcessor('org.projectlombok:lombok')
 
     // Spring Data Jpa
-    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
-    implementation("org.mariadb.jdbc:mariadb-java-client")
-    implementation('com.h2database:h2')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa') // JPA 추상화 라이브러리
+//    implementation("org.mariadb.jdbc:mariadb-java-client")
+    implementation('com.h2database:h2') // 인메모리 관계형 데이타베이스. 메모리에서 실행 되 재시작할 때마다 초기화되어 테스트로 많이 사용
 //    implementation('org.springframework.boot:spring-boot-starter-oauth2-client') // 권한 관련
 //    implementation('org.springframework.session:spring-session-jdbc') // 권한 관련
 //    testImplementation("org.springframework.security:spring-security-test") // 권한 관련
 
-    implementation ('mysql:mysql-connector-java')
-    compileOnly ('org.projectlombok:lombok')
-    testCompileOnly ('org.projectlombok:lombok')
-    developmentOnly ('org.springframework.boot:spring-boot-devtools')
+//    implementation ('mysql:mysql-connector-java')
+//    compileOnly ('org.projectlombok:lombok')
+//    testCompileOnly ('org.projectlombok:lombok')
+//    developmentOnly ('org.springframework.boot:spring-boot-devtools')
 //    providedRuntime ('org.springframework.boot:spring-boot-starter-tomcat')
-    implementation ('org.springframework.boot:spring-boot-starter-security')
-    implementation ('org.springframework.boot:spring-boot-starter-validation')
+//    implementation ('org.springframework.boot:spring-boot-starter-security')
+//    implementation ('org.springframework.boot:spring-boot-starter-validation')
 
 }
 
