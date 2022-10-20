@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 
-@RequiredArgsConstructor
+@RequiredArgsConstructor    // final 필드의 생성자 자동 생성, 주입
 @Service
 public class PostsService {
 

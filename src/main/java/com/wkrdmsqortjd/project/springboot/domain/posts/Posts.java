@@ -1,5 +1,6 @@
 package com.wkrdmsqortjd.project.springboot.domain.posts;
 
+import com.wkrdmsqortjd.project.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter                 // 롬복 어노테이션
 @NoArgsConstructor      // 롬복 어노테이션, 기본 생성자 자동 추가 public Posts(){}
 @Entity                 // JPA 어노테이션, 테이블과 링크 될 클래스임을 표현. 기본값으로 네이밍 설정 ex) SalesManager.java -> sales_manager table
-public class Posts {    // 실제 DB의 테이블과 매칭될 클래스 Entity 클래스라고도 불림, JPA 를 사용해 Entity 클래스를 통해 DB 데이터 수정
+public class Posts extends BaseTimeEntity {  // 실제 DB의 테이블과 매칭될 클래스 Entity 클래스라고도 불림, JPA 를 사용해 Entity 클래스를 통해 DB 데이터 수정
 
     @Id // 해당 테이블의 PK 필드
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK의 생성 규칙을 나타냄. 지금은 auto_increment 를 의미

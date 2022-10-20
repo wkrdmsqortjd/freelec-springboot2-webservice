@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor    // final 필드의 생성자 자동 생성, 주입
-@RestController
+@RestController // @Controller + @ResponseBody
 public class PostsApiController {
 
     private final PostsService postsService;
